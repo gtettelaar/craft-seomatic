@@ -31,6 +31,7 @@
 .DS_Store
 .idea
 .project
+cpresources/*
 .settings
 *.esproj
 *.sublime-workspace

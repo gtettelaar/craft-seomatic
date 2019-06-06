@@ -29,11 +29,13 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.20",
+        "craftcms/cms": "3.2.x-dev",
         "php-science/textrank": "^1.0.3",
         "davechild/textstatistics": "1.0.2",
-        "sunra/php-simple-html-dom-parser": "^1.5.2"
+        "sunra/php-simple-html-dom-parser": "^1.5.2",
+        "vlucas/phpdotenv": "^3.3"
     },
+
     "repositories": [
         {
             "type": "composer",
@@ -65,5 +67,8 @@
             "tag": "nystudio107\\seomatic\\services\\Tag",
             "title": "nystudio107\\seomatic\\services\\Title"
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.0"
     }
 }

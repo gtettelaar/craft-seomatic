@@ -16,6 +16,7 @@ use Craft;
 use craft\helpers\App;
 
 use yii\console\Controller;
+use yii\console\ExitCode;
 
 /**
  * SEOmatic Sitemap command
@@ -24,7 +25,7 @@ use yii\console\Controller;
  * @package   Seomatic
  * @since     3.0.0
  */
-class SitemapController extends Controller
+class SitemapController extends \craft\console\Controller
 {
     // Public Properties
     // =========================================================================
@@ -62,6 +63,24 @@ class SitemapController extends Controller
             'handle',
             'siteId',
         ];
+    }
+
+
+    /**
+     * Dont use this method - it wont actually execute anything.
+     * It is just used internally to test Craft-based console controller testing.
+     *
+     * @return int
+     * @internal
+     */
+    public function actionTest(): int
+    {
+        $this->stdout('22');
+        $this->stderr('123321123');
+
+        $this->outputCommand('An output command');
+
+        return ExitCode::OK;
     }
 
     /**
